@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            color: #0bc5ea;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            font-size: 18px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes lightningContainer {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(10px);
+            }
+        }
+
+        .lightning {
+            position: absolute;
+            opacity: 0;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 48px;
+            color: #00f;
+            animation: lightning 1s infinite;
+        }
+
+        @keyframes lightning {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        .smoke {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(226, 16, 16,UUUUUUUUUUUUUUUUUUUUUUUUUUUUU 0.3);
+            border-radius: 50%;
+            animation: smoke 5s linear infinite;
+        }
+
+        @keyframes smoke {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+            
+        }
+
+        .line-words {
+            opacity: 0;
+            font-size: 24px;
+            color:#e68f0e;
+            animation: formLine 1.5s infinite;
+        }
+
+        @keyframes formLine {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our Website</h1>
+        <p>We are here to serve you with the best!</p>
+        <div class="lightning-container">
+            <div class="lightning"><B>V</B></div>
+        </div>
+        <div class="smoke"></div>
+        <div class="line-words"><b>👇🏻👇🏻👇🏻</b></div>
+        <button onclick="redirectToHome()">Get Started</button>
+    </div>
+
+
+</style>
+</head>
+<body>
+<div id="app">
+    <div id="hero">
+        </div>
+</div>
+  
+<script type="module">
+    import { particlesCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js'
+
+    const pc = particlesCursor({
+        el: document.getElementById('app'),
+        gpgpuSize: 512,
+        colors: [0x1d9ae8, 0x1d9ae7], // Changed pink color to #00fffc and blue color
+        color: 0x1d9ae8,
+        coordScale: 0.15,
+
+    });
+
+    </script>
+    <script>
+        // JavaScript function to redirect to another page
+        function redirectToHome() {
+            window.location.href = "home.html"; // Change 'home.html' to your actual homepage URL
+        }
+    </script>
+</body>
+</html>
